@@ -17,5 +17,18 @@ module.exports = {
       { allowConstantExport: true },
     ],
     'react/prop-types': 'off',
+    'react/no-unknown-property': [
+      'error',
+      {
+        ignore: [
+          'intensity',
+          'position',
+          'fov',
+          'antialias',
+          'camera',
+          'gl',
+        ],
+      },
+    ],
   },
 }
