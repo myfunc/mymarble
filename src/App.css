@@ -3,4 +3,66 @@
   height: 100%;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(180deg, #020617 0%, #0b1120 100%);
+  color: #ffffff;
+}
+
+.game-canvas {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.game-canvas canvas {
+  display: block;
+}
+
+.game-overlay {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: rgba(6, 8, 18, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+}
+
+.game-overlay__button {
+  pointer-events: auto;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background: #4b5dff;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.game-overlay__button:hover {
+  transform: translateY(-1px);
+}
+
+.game-overlay__legend {
+  font-size: 0.9rem;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+@media (max-width: 768px) {
+  .game-overlay {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    top: auto;
+    bottom: 1rem;
+    width: calc(100% - 2rem);
+    max-width: 320px;
+  }
 }
